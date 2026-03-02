@@ -54,7 +54,7 @@ def main():
                     row = input_validation('Enter row: ', 1, 3)
                     column = input_validation('Enter column: ', 1, 3)
                     if board[row - 1][column - 1] != ' ':
-                        print('Pick an empty box')
+                        print('Pick an empty box\n')
                         continue
                     else:
                         board[row - 1][column - 1] = player
@@ -133,7 +133,7 @@ def main():
                         row = input_validation('Enter row: ', 1, 3)
                         column = input_validation('Enter column: ', 1, 3)
                         if board[row - 1][column - 1] != ' ':
-                            print('Pick an empty box')
+                            print('Pick an empty box\n')
                             continue
                         else:
                             board[row - 1][column - 1] = player_symbol
@@ -178,5 +178,5 @@ def main():
                 print('\nThanks For Playing!\n')
                 break
 
-
-main() 
+if __name__ == '__main__':
+    main() 

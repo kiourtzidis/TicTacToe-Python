@@ -1,18 +1,22 @@
 from random import random, randrange
 
 def input_validation(prompt, min_val, max_val):
+
     while True:
+
         try:
             num = int(input(prompt))
             if min_val <= num <= max_val:
                 return num
             else:
                 print(f'\nPlease enter a valid option({min_val}-{max_val})')
+
         except ValueError:
             print(f'\nPlease enter a valid option({min_val}-{max_val})')
 
 
 def print_board(board):
+
     print('\n    1   2   3')
     print('  +---+---+---+ ')
     for i in range(3):
@@ -22,7 +26,6 @@ def print_board(board):
 
 
 def print_score(score1, score2):
-    
     print(f'\n| Player X: {score1}')
     print(f'| Player O: {score2}')
 
@@ -34,6 +37,7 @@ def reset_board():
 
 
 def reset_score(stats):
+
     stats['friend']['X'] = 0
     stats['friend']['O'] = 0
     stats['friend']['round'] = 1
