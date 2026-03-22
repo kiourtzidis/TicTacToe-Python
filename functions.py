@@ -96,10 +96,10 @@ def computer_move(board, level, player_symbol, computer_symbol):
 
     if level == 1:
         pos = danger(computer_symbol)
-        if pos is not None and random() < 0.3:
+        if pos is not None and random() < 0.25:
             return pos
         pos = danger(player_symbol)
-        if pos is not None and random() < 0.3:
+        if pos is not None and random() < 0.35:
             return pos
         
         empty_squares = [] 
@@ -136,10 +136,10 @@ def computer_move(board, level, player_symbol, computer_symbol):
 
     elif level == 3:
         pos = danger(computer_symbol)
-        if pos is not None and random() < 0.90:
+        if pos is not None and random() < 0.9:
             return pos
         pos = danger(player_symbol)
-        if pos is not None and random() < 0.90:
+        if pos is not None and random() < 0.9:
             return pos
         elif board[1][1] == ' ':
             return (1, 1)
